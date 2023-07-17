@@ -18,7 +18,7 @@ class CleanButtonMainPage extends StatelessWidget {
 
   dynamic successfulMsg({required BuildContext context}) {
     return ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      duration: Duration(seconds: 1),
+      duration: Duration(milliseconds: 250),
       content: Center(
           child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

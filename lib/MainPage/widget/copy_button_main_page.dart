@@ -12,7 +12,7 @@ class CopyButtonMainPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(Icons.copy_rounded),
-        Text('Clear & copy'),
+        Text('Clean & copy'),
       ],
     );
   }
@@ -21,7 +21,7 @@ class CopyButtonMainPage extends StatelessWidget {
     required BuildContext context,
   }) {
     return ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      duration: Duration(seconds: 1),
+      duration: Duration(milliseconds: 250),
       content: Center(
           child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +43,7 @@ class CopyButtonMainPage extends StatelessWidget {
     required BuildContext context,
   }) {
     return ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      duration: Duration(seconds: 1),
+      duration: Duration(milliseconds: 200),
       content: Center(
           child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -70,7 +70,9 @@ class CopyButtonMainPage extends StatelessWidget {
           return ElevatedButton(
               onPressed: () {
                 context.read<MainPageBlocBloc>().add(CopyButtonMainPageEvent());
-                state is StatesChangesMainPage && state.text.isNotEmpty ? successfulMsg(context: context) : emptyMsg(context: context);
+                (state is StatesChangesMainPage && state.text.isNotEmpty) || (state is StatesChangesMainPage && state.text != '')
+                    ? successfulMsg(context: context)
+                    : emptyMsg(context: context);
               },
               child: icon());
         },

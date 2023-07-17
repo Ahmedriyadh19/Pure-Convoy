@@ -14,7 +14,7 @@ class MainPageBlocBloc extends Bloc<MainPageBlocEvent, MainPageBlocState> {
   MainPageBlocBloc() : super(MainPageBlocInitial()) {
     on<MainPageBlocEvent>((event, emit) {
       if (event is CopyButtonMainPageEvent) {
-        if (text.isNotEmpty) {
+        if (text.isNotEmpty || text != '') {
           ConverterString converter = ConverterString(text: text);
           converter.copyToClipboard();
           emit(

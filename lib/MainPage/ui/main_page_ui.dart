@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pure_convoy/MainPage/bloc/main_page_bloc_bloc.dart';
+import 'package:pure_convoy/MainPage/widget/app_logo.dart';
 import 'package:pure_convoy/MainPage/widget/clean_button_main_page.dart';
 import 'package:pure_convoy/MainPage/widget/copy_button_main_page.dart';
 import 'package:pure_convoy/MainPage/widget/text_input_main_page.dart';
@@ -30,7 +31,7 @@ class MainPageUi extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: ListView(
         shrinkWrap: true,
-        children: [const TextInputMainPage(), options()],
+        children: [const AppLogo(), const TextInputMainPage(), options()],
       ),
     );
   }
