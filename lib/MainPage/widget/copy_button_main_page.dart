@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pure_convoy/MainPage/bloc/events/copy_button_event_main_page.dart';
 import 'package:pure_convoy/MainPage/bloc/main_page_bloc_bloc.dart';
-import 'package:pure_convoy/MainPage/events/copy_button_event_main_page.dart';
-import 'package:pure_convoy/MainPage/states/states_changes_main_page.dart';
+import 'package:pure_convoy/MainPage/bloc/states/states_changes_main_page.dart';
 
 class CopyButtonMainPage extends StatelessWidget {
   const CopyButtonMainPage({super.key});
@@ -21,7 +21,7 @@ class CopyButtonMainPage extends StatelessWidget {
     required BuildContext context,
   }) {
     return ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      duration: Duration(milliseconds: 250),
+      duration: Duration(seconds: 1),
       content: Center(
           child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +43,7 @@ class CopyButtonMainPage extends StatelessWidget {
     required BuildContext context,
   }) {
     return ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      duration: Duration(milliseconds: 200),
+      duration: Duration(seconds: 1),
       content: Center(
           child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

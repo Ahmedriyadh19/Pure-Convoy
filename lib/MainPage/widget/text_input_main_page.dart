@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pure_convoy/MainPage/bloc/events/get_input_text_event_main_page.dart';
 import 'package:pure_convoy/MainPage/bloc/main_page_bloc_bloc.dart';
-import 'package:pure_convoy/MainPage/events/get_input_text_event_main_page.dart';
-import 'package:pure_convoy/MainPage/states/states_changes_main_page.dart';
+import 'package:pure_convoy/MainPage/bloc/states/states_changes_main_page.dart';
 
 class TextInputMainPage extends StatelessWidget {
   const TextInputMainPage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pure_convoy/MainPage/bloc/events/clean_button_event_main_page.dart';
 import 'package:pure_convoy/MainPage/bloc/main_page_bloc_bloc.dart';
-import 'package:pure_convoy/MainPage/events/clean_button_event_main_page.dart';
 
 class CleanButtonMainPage extends StatelessWidget {
   const CleanButtonMainPage({super.key});
@@ -18,7 +18,7 @@ class CleanButtonMainPage extends StatelessWidget {
 
   dynamic successfulMsg({required BuildContext context}) {
     return ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      duration: Duration(milliseconds: 250),
+      duration: Duration(seconds: 1),
       content: Center(
           child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
